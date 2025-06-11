@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import "./index.css";
 
 const App = () => {
   return (
@@ -25,8 +26,7 @@ const App = () => {
         </a>
         <a
           href="/CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+          download
           className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900"
         >
           Download CV
@@ -35,70 +35,60 @@ const App = () => {
 
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-2">About Me</h2>
-        <p>
-          I'm a Berlin-based Senior Software Engineer with over 7 years of hands-on experience in
-          building scalable full-stack applications. From optimizing financial systems at QNB to
-          engineering resilient telecom APIs at Ooredoo, I've delivered reliable, high-performance
-          solutions across fintech and telecom domains.
+        <p className="mb-2">
+          I'm a Berlin-based Senior Software Engineer with over 7 years of hands-on
+          experience in building scalable full-stack applications. From optimizing
+          financial systems at QNB to engineering resilient telecom APIs at Ooredoo,
+          I've delivered reliable, high-performance solutions across fintech and telecom
+          domains.
         </p>
-        <p className="mt-2">
-          My technical stack spans Java, Spring Boot, Angular, React, and cloud-native platforms
-          like Azure and AWS. I care deeply about clean code, agile collaboration, and meaningful
-          product impact. Let’s build something great together.
+        <p>
+          My technical stack spans Java, Spring Boot, Angular, React, and cloud-native
+          platforms like Azure and AWS. I care deeply about clean code, agile
+          collaboration, and meaningful product impact. Let's build something great
+          together.
         </p>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="border rounded p-4 shadow">
-            <h3 className="font-bold text-lg mb-1">Financial Analytics Dashboard</h3>
-            <p className="mb-2">
-              Reduced report generation time from 10 mins to 30 secs by optimizing SQL queries.
+        <h2 className="text-2xl font-semibold mb-2">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="p-4 border rounded shadow">
+            <h3 className="font-semibold">Financial Analytics Dashboard</h3>
+            <p className="text-sm mb-2">
+              Reduced report generation time from 10 mins to 30 secs by optimizing SQL
+              queries.
             </p>
-            <p className="text-sm text-gray-600 mb-2">
-              Tools: React, Spring Boot, Azure
-            </p>
-            <a
-              href="#"
-              className="text-blue-600 hover:underline text-sm"
-            >
-              GitHub (coming soon)
-            </a>
+            <p className="text-xs text-gray-500">Tools: React, Spring Boot, Azure</p>
           </div>
-
-          <div className="border rounded p-4 shadow">
-            <h3 className="font-bold text-lg mb-1">Telecom API Gateway</h3>
-            <p className="mb-2">
+          <div className="p-4 border rounded shadow">
+            <h3 className="font-semibold">Telecom API Gateway</h3>
+            <p className="text-sm mb-2">
               Scaled to handle 10K+ concurrent requests with zero downtime.
             </p>
-            <p className="text-sm text-gray-600 mb-2">
+            <p className="text-xs text-gray-500">
               Tools: Node.js, MongoDB, Kubernetes
             </p>
-            <a
-              href="#"
-              className="text-blue-600 hover:underline text-sm"
-            >
-              GitHub (coming soon)
-            </a>
           </div>
-
-          <div className="border rounded p-4 shadow">
-            <h3 className="font-bold text-lg mb-1">Airline Check-In App</h3>
-            <p className="mb-2">
-              Delivered real-time baggage tracking and self-check-in features used by thousands.
+          <div className="p-4 border rounded shadow">
+            <h3 className="font-semibold">Airline Check-In App</h3>
+            <p className="text-sm mb-2">
+              Deployed kiosk-based check-in app with facial recognition for airlines.
             </p>
-            <p className="text-sm text-gray-600 mb-2">
-              Tools: Angular, Spring Boot, AWS
-            </p>
-            <a
-              href="#"
-              className="text-blue-600 hover:underline text-sm"
-            >
-              GitHub (coming soon)
-            </a>
+            <p className="text-xs text-gray-500">Tools: Angular, Java, Firebase</p>
           </div>
         </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Skills</h2>
+        <ul className="list-disc list-inside">
+          <li>Frontend: React, Angular, HTML, CSS, JavaScript</li>
+          <li>Backend: Java, Spring Boot, Node.js, Express</li>
+          <li>Cloud: AWS, Azure</li>
+          <li>DevOps: Docker, Kubernetes, GitHub Actions</li>
+          <li>Tools: Git, Jira, Postman</li>
+        </ul>
       </section>
     </div>
   );
