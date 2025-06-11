@@ -1,5 +1,4 @@
-import React from "react";
-import "./index.css";
+import React from 'react';
 
 const App = () => {
   return (
@@ -8,7 +7,6 @@ const App = () => {
       <p className="text-center text-lg mb-4">
         Senior Software Engineer | Full Stack Developer
       </p>
-
       <div className="flex justify-center gap-4 mb-10">
         <a
           href="mailto:waqaserable786@gmail.com"
@@ -24,72 +22,63 @@ const App = () => {
         >
           LinkedIn
         </a>
-        <a
-          href="/CV.pdf"
-          download
-          className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900"
-        >
-          Download CV
-        </a>
+        <a 
+  href="/cv.pdf" 
+  download="Sheikh-Waqas-Kamran-CV.pdf" 
+  className="bg-gray-800 text-white px-4 py-2 rounded"
+>
+  Download CV
+</a>
       </div>
 
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-2">About Me</h2>
-        <p className="mb-2">
-          I'm a Berlin-based Senior Software Engineer with over 7 years of hands-on
-          experience in building scalable full-stack applications. From optimizing
-          financial systems at QNB to engineering resilient telecom APIs at Ooredoo,
-          I've delivered reliable, high-performance solutions across fintech and telecom
-          domains.
-        </p>
         <p>
-          My technical stack spans Java, Spring Boot, Angular, React, and cloud-native
-          platforms like Azure and AWS. I care deeply about clean code, agile
-          collaboration, and meaningful product impact. Let's build something great
-          together.
+          I'm Sheikh Waqas Kamran, a Berlin-based software engineer with over 7 years of battle-tested experience.
+          I don’t just build applications — I craft resilient, scalable systems that power fintech, telecom, and cloud platforms globally.
+          My work has driven millions in uptime efficiency and productivity gains. I deliver code that works, scales, and matters.
+        </p>
+        <p className="mt-2">
+          I specialize in full-stack engineering — from backend APIs to front-end polish — with a passion for clean code and product impact.
         </p>
       </section>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">Projects</h2>
+        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="p-4 border rounded shadow">
-            <h3 className="font-semibold">Financial Analytics Dashboard</h3>
-            <p className="text-sm mb-2">
-              Reduced report generation time from 10 mins to 30 secs by optimizing SQL
-              queries.
-            </p>
-            <p className="text-xs text-gray-500">Tools: React, Spring Boot, Azure</p>
+            <h3 className="text-xl font-bold">Financial Analytics Dashboard</h3>
+            <p>Reduced report generation from 10 minutes to 30 seconds by optimizing SQL queries.</p>
+            <p className="text-sm mt-2 text-gray-500">Tools: React, Spring Boot, Azure</p>
           </div>
           <div className="p-4 border rounded shadow">
-            <h3 className="font-semibold">Telecom API Gateway</h3>
-            <p className="text-sm mb-2">
-              Scaled to handle 10K+ concurrent requests with zero downtime.
-            </p>
-            <p className="text-xs text-gray-500">
-              Tools: Node.js, MongoDB, Kubernetes
-            </p>
+            <h3 className="text-xl font-bold">Telecom API Gateway</h3>
+            <p>Scaled to handle 10K+ concurrent requests with zero downtime.</p>
+            <p className="text-sm mt-2 text-gray-500">Tools: Node.js, MongoDB, Kubernetes</p>
           </div>
           <div className="p-4 border rounded shadow">
-            <h3 className="font-semibold">Airline Check-In App</h3>
-            <p className="text-sm mb-2">
-              Deployed kiosk-based check-in app with facial recognition for airlines.
-            </p>
-            <p className="text-xs text-gray-500">Tools: Angular, Java, Firebase</p>
+            <h3 className="text-xl font-bold">Airline Check-In App</h3>
+            <p>Designed a dynamic passenger boarding flow with React Hooks and REST APIs.</p>
+            <p className="text-sm mt-2 text-gray-500">Tools: React, Java, PostgreSQL</p>
           </div>
         </div>
       </section>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-2">Skills</h2>
-        <ul className="list-disc list-inside">
-          <li>Frontend: React, Angular, HTML, CSS, JavaScript</li>
-          <li>Backend: Java, Spring Boot, Node.js, Express</li>
-          <li>Cloud: AWS, Azure</li>
-          <li>DevOps: Docker, Kubernetes, GitHub Actions</li>
-          <li>Tools: Git, Jira, Postman</li>
+      <section className="mb-10">
+        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 list-disc list-inside text-gray-700">
+          <li>Java, Spring Boot</li>
+          <li>React, Angular, TypeScript</li>
+          <li>Node.js, Express</li>
+          <li>MongoDB, PostgreSQL, SQL</li>
+          <li>Azure, AWS, Kubernetes</li>
+          <li>CI/CD, Git, Docker</li>
         </ul>
       </section>
+
+      <footer className="text-center text-sm text-gray-400 mt-10">
+        Built with React + Tailwind — by Sheikh Waqas Kamran
+      </footer>
     </div>
   );
 };
