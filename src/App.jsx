@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [showMoreFinance, setShowMoreFinance] = useState(false);
+  const [showMoreTelecom, setShowMoreTelecom] = useState(false);
+  const [showMoreAirline, setShowMoreAirline] = useState(false);
+  const [showMoreSmartContract, setShowMoreSmartContract] = useState(false);
+  const [showMoreResumeParser, setShowMoreResumeParser] = useState(false);
+  const [showMoreImagePipeline, setShowMoreImagePipeline] = useState(false);
 
-  // Optionally persist theme in localStorage
   useEffect(() => {
     const saved = localStorage.getItem("darkMode");
     if (saved === "true") setDarkMode(true);
@@ -71,21 +76,85 @@ const App = () => {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">Projects</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-4 border rounded shadow">
-              <h3 className="text-xl font-bold">Financial Analytics Dashboard</h3>
-              <p>Reduced report generation from 10 minutes to 30 seconds by optimizing SQL queries.</p>
-              <p className="text-sm mt-2 text-gray-500">Tools: React, Spring Boot, Azure</p>
+
+            {/* Financial Dashboard */}
+            <div className="p-4 border rounded shadow hover:shadow-lg transition duration-300">
+              <h3 className="text-xl font-bold mb-1">📊 Financial Analytics Dashboard</h3>
+              <p>Built a real-time financial dashboard transforming raw transaction streams into actionable KPIs.</p>
+              {showMoreFinance && (
+                <p className="mt-2">Reduced report generation time from <strong>10 minutes to 30 seconds</strong> through SQL optimization and caching. Enabled business users to make faster, data-driven decisions.</p>
+              )}
+              <button onClick={() => setShowMoreFinance(!showMoreFinance)} className="mt-2 text-sm text-blue-600 hover:underline">
+                {showMoreFinance ? 'Show less' : 'Read more'}
+              </button>
+              <p className="text-sm mt-2 text-gray-500">Tech Stack: React, Spring Boot, Azure</p>
             </div>
-            <div className="p-4 border rounded shadow">
-              <h3 className="text-xl font-bold">Telecom API Gateway</h3>
-              <p>Scaled to handle 10K+ concurrent requests with zero downtime.</p>
-              <p className="text-sm mt-2 text-gray-500">Tools: Node.js, MongoDB, Kubernetes</p>
+
+            {/* Telecom API Gateway */}
+            <div className="p-4 border rounded shadow hover:shadow-lg transition duration-300">
+              <h3 className="text-xl font-bold mb-1">🌐 Telecom API Gateway</h3>
+              <p>Engineered a fault-tolerant gateway handling 10K+ concurrent telecom requests per second.</p>
+              {showMoreTelecom && (
+                <p className="mt-2">Integrated partner services, added SLA monitoring, and ensured zero-downtime deployments across regions.</p>
+              )}
+              <button onClick={() => setShowMoreTelecom(!showMoreTelecom)} className="mt-2 text-sm text-blue-600 hover:underline">
+                {showMoreTelecom ? 'Show less' : 'Read more'}
+              </button>
+              <p className="text-sm mt-2 text-gray-500">Tech Stack: Node.js, MongoDB, Kubernetes</p>
             </div>
-            <div className="p-4 border rounded shadow">
-              <h3 className="text-xl font-bold">Airline Check-In App</h3>
-              <p>Designed a dynamic passenger boarding flow with React Hooks and REST APIs.</p>
-              <p className="text-sm mt-2 text-gray-500">Tools: React, Java, PostgreSQL</p>
+
+            {/* Airline Check-In */}
+            <div className="p-4 border rounded shadow hover:shadow-lg transition duration-300">
+              <h3 className="text-xl font-bold mb-1">✈️ Airline Check-In App</h3>
+              <p>Developed a passenger check-in system improving boarding efficiency by 25%.</p>
+              {showMoreAirline && (
+                <p className="mt-2">Included seat selection, QR boarding passes, and role-based access. Connected to backend services via REST APIs.</p>
+              )}
+              <button onClick={() => setShowMoreAirline(!showMoreAirline)} className="mt-2 text-sm text-blue-600 hover:underline">
+                {showMoreAirline ? 'Show less' : 'Read more'}
+              </button>
+              <p className="text-sm mt-2 text-gray-500">Tech Stack: React, Java, PostgreSQL</p>
             </div>
+
+            {/* Smart Contract */}
+            <div className="p-4 border rounded shadow hover:shadow-lg transition duration-300">
+              <h3 className="text-xl font-bold mb-1">🔐 Smart Contract Audit Dashboard</h3>
+              <p>Created a tool for analyzing Ethereum smart contracts for gas efficiency and vulnerabilities.</p>
+              {showMoreSmartContract && (
+                <p className="mt-2">Used Solidity AST parsing and React to highlight audit risks for blockchain engineers.</p>
+              )}
+              <button onClick={() => setShowMoreSmartContract(!showMoreSmartContract)} className="mt-2 text-sm text-blue-600 hover:underline">
+                {showMoreSmartContract ? 'Show less' : 'Read more'}
+              </button>
+              <p className="text-sm mt-2 text-gray-500">Tech Stack: React, Node.js, Solidity, Ethers.js</p>
+            </div>
+
+            {/* Resume Parser */}
+            <div className="p-4 border rounded shadow hover:shadow-lg transition duration-300">
+              <h3 className="text-xl font-bold mb-1">🤖 AI-Powered Resume Parser</h3>
+              <p>Built a resume screening engine using NLP to match candidates with job descriptions.</p>
+              {showMoreResumeParser && (
+                <p className="mt-2">Reduced manual HR screening by 80%. Enabled auto-tagging, ranking, and summarizing applicant skills.</p>
+              )}
+              <button onClick={() => setShowMoreResumeParser(!showMoreResumeParser)} className="mt-2 text-sm text-blue-600 hover:underline">
+                {showMoreResumeParser ? 'Show less' : 'Read more'}
+              </button>
+              <p className="text-sm mt-2 text-gray-500">Tech Stack: Python, FastAPI, React, spaCy</p>
+            </div>
+
+            {/* Image Pipeline */}
+            <div className="p-4 border rounded shadow hover:shadow-lg transition duration-300">
+              <h3 className="text-xl font-bold mb-1">🖼️ Scalable Image Processing Pipeline</h3>
+              <p>Designed a cloud-native image service handling millions of uploads daily.</p>
+              {showMoreImagePipeline && (
+                <p className="mt-2">Reduced bandwidth costs by 40% via WebP optimization and CDN-based lazy loading.</p>
+              )}
+              <button onClick={() => setShowMoreImagePipeline(!showMoreImagePipeline)} className="mt-2 text-sm text-blue-600 hover:underline">
+                {showMoreImagePipeline ? 'Show less' : 'Read more'}
+              </button>
+              <p className="text-sm mt-2 text-gray-500">Tech Stack: AWS Lambda, S3, Node.js, Docker</p>
+            </div>
+
           </div>
         </section>
 
